@@ -1,0 +1,48 @@
+Random number guess code
+_____________________
+
+START
+
+randomNumber = RANDOM (1,100)
+
+insert num1
+print " Guess a number 1-100. "
+
+if num1 > randomNumber
+    print num1 + " Number is too high, guess again."
+    
+else if num1 < randomNumber
+    print num1 + " Number is too low, guess again."
+    
+else if num1 = randomNumber
+    print "Congratulations! The number is " + randomNumber
+
+END
+
+
+_____________________
+Dictionary guess code
+_______________________
+
+START
+
+guessWord = PIG
+
+insert randomWord
+print " Guess the word from the dictionary"
+
+if randomWord > guessWord
+    print " Turn the pages backward to get closer and guess a different word."
+else if randomWord < guessWord
+    print " Turn the pages forward to get closer and guess a different word."
+    
+else if randomWord > guessWord (On the right page)
+    print " Find a word upward on the page and guess again."
+else if randomWord < guessWord (On the right page)
+    print " Find a word downward on the page and guess again."
+
+else if randomWord = guessWord
+    print "Congratulations! The word is " + guessWord
+
+END
+
