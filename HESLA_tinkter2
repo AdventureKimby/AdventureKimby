@@ -1,0 +1,40 @@
+#imports
+import tkinter as tk
+import tkinter.font as font
+
+#definition of generate text
+def generate_text():
+    user_text = text_input.get()
+    selected_font = font_var.get()
+    output_label.config(text=user_text, font=(selected_font, 24))
+
+#main window
+window = tk.Tk()
+window.title("Font Character Generator")
+
+#string font variation
+font_var = tk.StringVar(window)
+font_var.set("Arial") # Default font
+
+#font options
+font_options = ["Arial", "Times New Roman", "Courier New"] # Add more fonts as needed
+
+#font dropdown-will be converting into buttons that pop up in new window
+font_dropdown = tk.OptionMenu(window, font_var, *font_options)
+font_dropdown.pack()
+
+#text input box
+text_input = tk.Entry(window)
+text_input.pack()
+
+#generate vutton may elimate later or change to a reset button
+generate_button = tk.Button(window, text="Generate", command=generate_text)
+generate_button.pack()
+
+#labels for output
+output_label = tk.Label(window, text="", font=("Arial", 24))
+output_label.pack()
+
+#GUI
+window.mainloop()
+
